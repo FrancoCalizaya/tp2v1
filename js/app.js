@@ -41,14 +41,14 @@ class UI {
 	deletTask(element){
 		
 		let parent = element.parentElement.parentElement;
+		console.log(parent)
 		let id;
 		if(element.name === 'delete'){
 			let ui_d = new LocalStorage();
 			//console.log(element.parentElement)
 			element.parentElement.parentElement.remove();
-			console.log(element)
-			id = parent.firstElementChild.nextElementSibling.id;	// 	PADRE <LI> -> PRIMER HIJO <INPUT> -> HERMANO SIG. <SPAN> (ID)
-			console.log(id)		
+			id = parent.firstElementChild.firstElementChild.nextElementSibling.id;	// 	PADRE <LI> ->PRIMER HIJO <DIV> PRIMER HIJO <INPUT> -> HERMANO SIG. <SPAN> (ID)
+			console.log('ID ENCONTRADO: '+id)		
 			this.removeItemFromArr(arrayTask,id);
 			ui_d.saveLocal();										//	ACTUALIZANDO EL LOCALSTORAGE
 
@@ -107,7 +107,7 @@ class UI {
 			const shareData = {
 				title: 'Tareas de Walter',
 				text: document.getElementById(stringID).innerHTML,
-				url: 'https://francocalizaya.github.io/tp1/',
+				url: 'https://francocalizaya.github.io/tp2v2/',
 			}
 			if (navigator.share) {
 			navigator.share(shareData).then(() => {
@@ -231,14 +231,7 @@ document.getElementById('task-list')
 			//console.log(event);
 		});
 	}
-
-	//ACTIVA EL EL FIXED DE INPUT CUANDO LA PAGINA TENGA EL SCROLL
-	/*
-	window.addEventListener('scroll', function(evt) {
-		document.getElementById('task-form').className="fixed";
-		document.getElementById('button-submit').className="full addFixed icon-checkmark";
-	  }, false);
-	*/
+	
 
 }());
 

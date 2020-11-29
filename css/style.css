@@ -192,6 +192,14 @@ body .boxlist .task-body ul li div a:hover {
   right: 60px;
 }
 
+.js-width {
+  width: 500px;
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
 .cls::after {
   content: "";
   display: block;
@@ -202,6 +210,14 @@ body .boxlist .task-body ul li div a:hover {
   /* For mobile phones: */
   body {
     width: 100%;
+    min-width: 570px;
+  }
+  .addFixed {
+    position: relative;
+    top: 0px;
+  }
+  .task-input form input {
+    width: 553;
   }
 }
 /*# sourceMappingURL=style.css.map */
