@@ -221,12 +221,12 @@ body {
     /* For mobile phones: */
     body {
         background-color: violet;
-      width: 100%;
+         width: 100%;
+         min-width: 570px;
     }
 
     .addFixed {
-        position: absolute; 
-        top: 7px;
-        right: 60px;
+        position: relative;
+        top: 0px;
     }
   }
