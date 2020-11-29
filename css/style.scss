@@ -1,0 +1,225 @@
+:-webkit-full-screen{
+    width: 100%;
+    height: 100%;
+}
+
+:-moz-full-screen{
+    background-color: white;
+}
+
+/////////////////////////////////////////
+
+//  VARIABLES
+
+$font-size-browser : 0.5rem;
+$standard-size : 1rem;          // borders, paddings, margins, witdhs, heights, font sizes, etc
+$button-border : 0.0625rem;     //
+$hr-border: 0.125rem;
+$distance : 1rem;
+$input-task-height: 4rem;
+$button-height-width: 3rem;     //
+$task-fontSize: 1rem;           //
+$task-distance: 1rem;
+$movil-marginLR: 1rem;
+$input-task-maxWidth: 60rem;
+$margin-auto-center: 0 auto;
+
+$colorText: white;           //
+
+$distanciaAux: 10px;
+$hover : rgb(100, 100, 100);
+
+$min-Width: 500px;
+//  
+
+$primary-color: $colorText;
+$background-task: #4e4e4e;
+$background-input: #2f2f2f;
+
+input{
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+    color: $colorText;
+}
+input::placeholder{
+    color: rgb(204, 204, 204);
+}
+
+
+label {
+    cursor: pointer;
+}
+
+.left{
+    overflow: hidden;
+    padding: $distanciaAux 0;
+    float: left;
+}
+.right{
+    position: absolute;
+    right: 10px;
+}
+.form-box{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.full{
+    z-index: 15;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    height: $button-height-width;
+    width: $button-height-width;
+    color: $colorText;
+    background-color: transparent;
+    border: $colorText $button-border inset ;
+    background: none;
+}
+.full:hover{
+    background: $hover;
+}
+
+.container {
+    cursor: pointer;
+}
+
+body {
+    font-size: $font-size-browser;
+    color: $primary-color;
+    background-color: #222222;
+
+    section{
+        //width: 40%;
+        //min-width: $min-Width;
+        margin: 0 auto;
+    }
+
+    .boxlist{
+        display: block;
+        margin: $margin-auto-center;
+        display: table;
+        max-width: $input-task-maxWidth;
+
+        hr{
+            min-width: 500px;
+            width: 100%;
+            border: $hr-border inset;
+            color: $background-input;
+        }
+        .task-tittle{
+            width: 100%;
+            position: relative;
+            margin-bottom: $standard-size;
+            height: $input-task-height;
+            text-align:center; 
+            display:table;
+            h1{
+                display:table-cell; 
+                vertical-align:middle;
+                margin: 0;
+                font-size: $task-fontSize+0.2rem;
+            }
+
+
+
+        }
+        .task-input{
+            z-index: 20;
+            position: relative;
+            margin-bottom: $standard-size;
+            form{
+                input{
+                    
+                    z-index: 10;
+                    color: $colorText;
+                    height: $input-task-height;
+                    width: 100%;
+                    font-size: $task-fontSize;
+                    max-width: $input-task-maxWidth;
+                    box-sizing: border-box;
+                    padding: 15px 70px 15px 15px;
+                    border: none;
+                    background: #3b3b3b;
+                }
+            }
+        }
+        .task-body{
+            box-sizing: content-box;
+            max-width: $input-task-maxWidth;
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li{
+                    position: relative;
+                    font-size: 1rem;
+                    display: block;
+                    padding: 1rem;
+                    padding-right: 150px;
+                    background-color: #4e4e4e;
+                    margin-top: $distance;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+
+                    
+                    
+                    div{
+                        input:checked + span{
+                            text-decoration:line-through;
+                        }
+                        span{
+                        
+                            max-width: 85%;
+                            //display: block;
+                            font-size: $task-fontSize;
+                            padding-left: $distanciaAux;
+                        }
+                        a{
+                            text-decoration: none;
+                            float: right;
+                            padding: $distanciaAux;
+                            margin-left: 6px;
+                            border: $colorText 1px inset;
+                            color: $colorText;
+
+                        
+                            
+                        }
+
+                        a:hover{
+                                background: #3b3b3b;
+                            }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.addFixed{
+    position: relative;
+    top: -2px;
+    right: 60px;
+}
+.cls::after { 
+    content: "";
+    display: block; 
+    clear: both;
+ }
+
+ @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    body {
+      width: 100%;
+    }
+  }
