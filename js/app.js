@@ -233,12 +233,12 @@ document.getElementById('task-list')
 	}
 
 	//ACTIVA EL EL FIXED DE INPUT CUANDO LA PAGINA TENGA EL SCROLL
-	/*
+	
 	window.addEventListener('scroll', function(evt) {
 		document.getElementById('task-form').className="fixed";
 		document.getElementById('button-submit').className="full addFixed icon-checkmark";
 	  }, false);
-	*/
+	
 
 }());
 
