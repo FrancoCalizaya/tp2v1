@@ -30,7 +30,8 @@ $distanciaAux: 10px;
 $hover : rgb(100, 100, 100);
 
 $min-Width: 500px;
-//  
+
+//
 
 $primary-color: $colorText;
 $background-task: #4e4e4e;
@@ -141,7 +142,7 @@ body {
                     z-index: 10;
                     color: $colorText;
                     height: $input-task-height;
-                    width: 503px;
+                    width: 100%;
                     font-size: $task-fontSize;
                     max-width: $input-task-maxWidth;
                     box-sizing: border-box;
@@ -211,6 +212,13 @@ body {
     top: -2px;
     right: 60px;
 }
+  
+.js-width{
+    width: $min-Width;
+}
+.margin-top{
+    margin-top: 80px;
+}
 .cls::after { 
     content: "";
     display: block; 
@@ -220,7 +228,6 @@ body {
  @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     body {
-        background-color: violet;
          width: 100%;
          min-width: 570px;
     }
@@ -228,5 +235,12 @@ body {
     .addFixed {
         position: relative;
         top: 0px;
+    }
+    .task-input{
+        form{
+            input{
+                width: 553;
+            }
+        }
     }
   }

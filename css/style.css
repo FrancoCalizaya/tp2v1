@@ -129,7 +129,7 @@ body .boxlist .task-input form input {
   z-index: 10;
   color: white;
   height: 4rem;
-  width: 503px;
+  width: 100%;
   font-size: 1rem;
   max-width: 60rem;
   -webkit-box-sizing: border-box;
@@ -192,6 +192,14 @@ body .boxlist .task-body ul li div a:hover {
   right: 60px;
 }
 
+.js-width {
+  width: 500px;
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
 .cls::after {
   content: "";
   display: block;
@@ -201,13 +209,15 @@ body .boxlist .task-body ul li div a:hover {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   body {
-    background-color: violet;
     width: 100%;
     min-width: 570px;
   }
   .addFixed {
     position: relative;
     top: 0px;
+  }
+  .task-input form input {
+    width: 553;
   }
 }
 /*# sourceMappingURL=style.css.map */
