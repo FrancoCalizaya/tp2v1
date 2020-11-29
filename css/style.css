@@ -204,5 +204,10 @@ body .boxlist .task-body ul li div a:hover {
     background-color: violet;
     width: 100%;
   }
+  .addFixed {
+    position: absolute;
+    top: 7px;
+    right: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
