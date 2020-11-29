@@ -107,7 +107,7 @@ class UI {
 			const shareData = {
 				title: 'Tareas de Walter',
 				text: document.getElementById(stringID).innerHTML,
-				url: 'https://francocalizaya.github.io/tp1/',
+				url: 'https://francocalizaya.github.io/tp2v1/',
 			}
 			if (navigator.share) {
 			navigator.share(shareData).then(() => {
@@ -231,15 +231,6 @@ document.getElementById('task-list')
 			//console.log(event);
 		});
 	}
-
-	//ACTIVA EL EL FIXED DE INPUT CUANDO LA PAGINA TENGA EL SCROLL
-	
-	window.addEventListener('scroll', function(evt) {
-		document.getElementById('task-form').className="fixed js-width";
-		document.getElementById('button-submit').className="full icon-checkmark";
-		document.getElementById('task-body').className="task-body margin-top";
-		
-	  }, false);
 	
 
 }());

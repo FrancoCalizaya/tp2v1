@@ -212,10 +212,6 @@ body .boxlist .task-body ul li div a:hover {
     width: 100%;
     min-width: 570px;
   }
-  .addFixed {
-    position: relative;
-    top: 0px;
-  }
   .task-input form input {
     width: 553;
   }
