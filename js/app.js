@@ -107,7 +107,7 @@ class UI {
 			const shareData = {
 				title: 'Tareas de Walter',
 				text: document.getElementById(stringID).innerHTML,
-				url: 'https://francocalizaya.github.io/tp2v2/',
+				url: 'https://francocalizaya.github.io/tp2v1/',
 			}
 			if (navigator.share) {
 			navigator.share(shareData).then(() => {
