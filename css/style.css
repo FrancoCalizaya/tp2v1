@@ -129,7 +129,7 @@ body .boxlist .task-input form input {
   z-index: 10;
   color: white;
   height: 4rem;
-  width: 100%;
+  width: 503px;
   font-size: 1rem;
   max-width: 60rem;
   -webkit-box-sizing: border-box;
@@ -201,6 +201,7 @@ body .boxlist .task-body ul li div a:hover {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   body {
+    background-color: violet;
     width: 100%;
   }
 }
